@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c5iacgwdmpdgv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ilcil"]
+albedo_color = Color(0, 0.5833335, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hls8"]
+albedo_color = Color(0.4962579, 0.17455018, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbghi"]
+albedo_color = Color(0.5, 0.17500001, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hn12h"]
+material = SubResource("StandardMaterial3D_hbghi")
+height = 10.0
+
+[node name="Level1" type="Node3D" unique_id=267723521]
+
+[node name="OceanFloor" type="CSGBox3D" parent="." unique_id=1013749090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+size = Vector3(75, 3, 75)
+material = SubResource("StandardMaterial3D_ilcil")
+
+[node name="Deck" type="Node" parent="." unique_id=1695222886]
+
+[node name="Floor" type="CSGBox3D" parent="Deck" unique_id=1980146762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.370216, 5.1854296, 0)
+size = Vector3(25, 1, 10)
+material = SubResource("StandardMaterial3D_3hls8")
+
+[node name="Pole" type="MeshInstance3D" parent="Deck" unique_id=761074086]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.86775, 3.991468, 4.988621)
+mesh = SubResource("CylinderMesh_hn12h")
+
+[node name="Pole2" type="MeshInstance3D" parent="Deck" unique_id=243455817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.840435, 3.991468, -4.9812083)
+mesh = SubResource("CylinderMesh_hn12h")
+
+[node name="Pole3" type="MeshInstance3D" parent="Deck" unique_id=995857067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0973682, 3.991468, -5.0072107)
+mesh = SubResource("CylinderMesh_hn12h")
+
+[node name="Pole4" type="MeshInstance3D" parent="Deck" unique_id=465971311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1305857, 3.991468, 4.988621)
+mesh = SubResource("CylinderMesh_hn12h")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=486104190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.587852, 7.685693, 0)
+size = Vector3(25, 1, 75)
