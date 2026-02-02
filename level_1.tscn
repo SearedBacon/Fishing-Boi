@@ -11,7 +11,12 @@ albedo_color = Color(0.5, 0.17500001, 0, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_hn12h"]
 material = SubResource("StandardMaterial3D_hbghi")
+top_radius = 0.75
+bottom_radius = 0.75
 height = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihfcg"]
+albedo_color = Color(0.5, 0.17500001, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hn12h"]
 albedo_color = Color(0, 0.54, 0.1800001, 1)
@@ -26,27 +31,40 @@ material = SubResource("StandardMaterial3D_ilcil")
 [node name="Deck" type="Node" parent="." unique_id=1695222886]
 
 [node name="Floor" type="CSGBox3D" parent="Deck" unique_id=1980146762]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.370216, 5.1854296, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.37, 6, 0)
 size = Vector3(25, 1, 10)
 material = SubResource("StandardMaterial3D_3hls8")
 
 [node name="Pole" type="MeshInstance3D" parent="Deck" unique_id=761074086]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.86775, 3.991468, 4.988621)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 5, 4.989)
 mesh = SubResource("CylinderMesh_hn12h")
 
 [node name="Pole2" type="MeshInstance3D" parent="Deck" unique_id=243455817]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.840435, 3.991468, -4.9812083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 5, -4.981)
 mesh = SubResource("CylinderMesh_hn12h")
 
 [node name="Pole3" type="MeshInstance3D" parent="Deck" unique_id=995857067]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0973682, 3.991468, -5.0072107)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.131, 5, -5.007)
 mesh = SubResource("CylinderMesh_hn12h")
 
 [node name="Pole4" type="MeshInstance3D" parent="Deck" unique_id=465971311]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1305857, 3.991468, 4.988621)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.131, 5, 4.989)
 mesh = SubResource("CylinderMesh_hn12h")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=486104190]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.587852, 7.685693, 0)
-size = Vector3(25, 1, 75)
+[node name="Pole5" type="MeshInstance3D" parent="Deck" unique_id=736588484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8, 5, -5.029)
+mesh = SubResource("CylinderMesh_hn12h")
+
+[node name="Pole6" type="MeshInstance3D" parent="Deck" unique_id=551209916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8, 5, 4.989)
+mesh = SubResource("CylinderMesh_hn12h")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Deck" unique_id=1533921003]
+transform = Transform3D(0.9896539, -0.14347534, 0, 0.14347534, 0.9896539, 0, 0, 0, 1, -22.7, 5.577, 0.06)
+size = Vector3(6, 1, 10)
+material = SubResource("StandardMaterial3D_ihfcg")
+
+[node name="Land" type="CSGBox3D" parent="." unique_id=486104190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.76567, 0.7004175, 0)
+size = Vector3(25, 10, 75)
 material = SubResource("StandardMaterial3D_hn12h")
