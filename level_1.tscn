@@ -13,6 +13,9 @@ albedo_color = Color(0.5, 0.17500001, 0, 1)
 material = SubResource("StandardMaterial3D_hbghi")
 height = 10.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hn12h"]
+albedo_color = Color(0, 0.54, 0.1800001, 1)
+
 [node name="Level1" type="Node3D" unique_id=267723521]
 
 [node name="OceanFloor" type="CSGBox3D" parent="." unique_id=1013749090]
@@ -46,3 +49,4 @@ mesh = SubResource("CylinderMesh_hn12h")
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=486104190]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.587852, 7.685693, 0)
 size = Vector3(25, 1, 75)
+material = SubResource("StandardMaterial3D_hn12h")
