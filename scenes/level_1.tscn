@@ -37,6 +37,14 @@ height = 10.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihfcg"]
 albedo_color = Color(0.5, 0.17500001, 0, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bswci"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rus8k"]
+albedo_color = Color(0, 1, 0.9333334, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xbjy"]
+albedo_color = Color(0.5, 0.17500001, 0, 1)
+
 [node name="Level1" type="Node3D" unique_id=267723521]
 script = ExtResource("1_014kd")
 
@@ -53,10 +61,9 @@ size = Vector3(75, 3, 75)
 material = SubResource("StandardMaterial3D_ilcil")
 
 [node name="Land" type="CSGBox3D" parent="." unique_id=486104190]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.76567, 0.7004175, 0)
-size = Vector3(25, 10, 75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.98552, 0.7004175, 0)
+size = Vector3(61.439697, 10, 75)
 material = SubResource("StandardMaterial3D_hn12h")
-metadata/_edit_lock_ = true
 
 [node name="Deck" type="Node" parent="." unique_id=1695222886]
 
@@ -106,3 +113,23 @@ material = SubResource("StandardMaterial3D_ihfcg")
 transform = Transform3D(1, 0, 0, 0, 0.8405288, 0.5417669, 0, -0.5417669, 0.8405288, -2.640092, 20.120394, 22.855976)
 
 [node name="UpgradeShop" parent="." unique_id=1040199959 instance=ExtResource("2_bswci")]
+visible = false
+
+[node name="UpgradeStore" type="Node" parent="." unique_id=2025663157]
+
+[node name="Big" type="CSGBox3D" parent="UpgradeStore" unique_id=683135695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.708664, 20.680708, 0)
+size = Vector3(12, 30, 25)
+material = SubResource("StandardMaterial3D_bswci")
+
+[node name="Window" type="Node" parent="UpgradeStore" unique_id=1824840700]
+
+[node name="Glass" type="CSGBox3D" parent="UpgradeStore/Window" unique_id=773554245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.130394, 15.45046, 7.987273)
+size = Vector3(5, 5, 5)
+material = SubResource("StandardMaterial3D_rus8k")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="UpgradeStore/Window" unique_id=257441217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.936844, 15.551804, 10.294726)
+size = Vector3(1, 7, 1)
+material = SubResource("StandardMaterial3D_5xbjy")
