@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cuo8gfhkuj1sp"]
+
+[ext_resource type="Script" uid="uid://4tfk2mcg8iqd" path="res://scripts/upgrade_shop.gd" id="1_v8ny2"]
+
+[node name="UpgradeShop" type="CanvasLayer" unique_id=1040199959]
+script = ExtResource("1_v8ny2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1964844977]
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(0.36, 0.36, 0.36, 0.5019608)
+
+[node name="DepthButon" type="Button" parent="." unique_id=213497287]
+offset_left = 150.0
+offset_top = 195.0
+offset_right = 206.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 40
+text = "Depth"
+
+[node name="ReelSpeedButton" type="Button" parent="." unique_id=2053628293]
+offset_left = 134.0
+offset_top = 266.0
+offset_right = 227.0
+offset_bottom = 297.0
+theme_override_font_sizes/font_size = 40
+text = "Reel Speed"
+
+[node name="LineSpeedButton" type="Button" parent="." unique_id=306555426]
+offset_left = 127.0
+offset_top = 372.0
+offset_right = 239.0
+offset_bottom = 403.0
+theme_override_font_sizes/font_size = 40
+text = "Line Strength"
+
+[connection signal="pressed" from="DepthButon" to="." method="_on_depth_buton_pressed"]
+[connection signal="pressed" from="ReelSpeedButton" to="." method="_on_reel_speed_button_pressed"]
+[connection signal="pressed" from="LineSpeedButton" to="." method="_on_line_speed_button_pressed"]
