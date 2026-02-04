@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cthanm8naway1" path="res://scripts/level_1.gd" id="1_014kd"]
 [ext_resource type="PackedScene" uid="uid://cuo8gfhkuj1sp" path="res://scenes/upgrade_shop.tscn" id="2_bswci"]
+[ext_resource type="PackedScene" uid="uid://dw2gc2ovfuieo" path="res://scenes/window.tscn" id="3_rus8k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_014kd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -40,10 +41,24 @@ albedo_color = Color(0.5, 0.17500001, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bswci"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rus8k"]
-albedo_color = Color(0, 1, 0.9333334, 1)
+albedo_color = Color(0.8301911, 3.3210217e-06, 6.738305e-07, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_5xbjy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xbjy"]
 albedo_color = Color(0.5, 0.17500001, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nkto"]
+albedo_color = Color(0.5, 0.17500001, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fcfvj"]
+material = SubResource("StandardMaterial3D_4nkto")
+height = 8.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcfvj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pa8r4"]
+albedo_color = Color(0.7425065, 2.7915835e-06, 5.7756904e-07, 1)
 
 [node name="Level1" type="Node3D" unique_id=267723521]
 script = ExtResource("1_014kd")
@@ -110,7 +125,7 @@ size = Vector3(6, 1, 10)
 material = SubResource("StandardMaterial3D_ihfcg")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1110458347]
-transform = Transform3D(1, 0, 0, 0, 0.8405288, 0.5417669, 0, -0.5417669, 0.8405288, -2.640092, 20.120394, 22.855976)
+transform = Transform3D(1, 0, 0, 0, 0.759646, 0.65033674, 0, -0.65033674, 0.759646, -23.383654, 36.665707, 43.84237)
 
 [node name="UpgradeShop" parent="." unique_id=1040199959 instance=ExtResource("2_bswci")]
 visible = false
@@ -118,18 +133,59 @@ visible = false
 [node name="UpgradeStore" type="Node" parent="." unique_id=2025663157]
 
 [node name="Big" type="CSGBox3D" parent="UpgradeStore" unique_id=683135695]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.708664, 20.680708, 0)
-size = Vector3(12, 30, 25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.708664, 19.00395, 0)
+size = Vector3(12, 26.646484, 25)
 material = SubResource("StandardMaterial3D_bswci")
 
-[node name="Window" type="Node" parent="UpgradeStore" unique_id=1824840700]
+[node name="Window" parent="UpgradeStore" unique_id=2024856384 instance=ExtResource("3_rus8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 15.074189, 6.5588875)
 
-[node name="Glass" type="CSGBox3D" parent="UpgradeStore/Window" unique_id=773554245]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.130394, 15.45046, 7.987273)
-size = Vector3(5, 5, 5)
+[node name="Window2" parent="UpgradeStore" unique_id=1348261009 instance=ExtResource("3_rus8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 15.074189, -7.9710264)
+
+[node name="Door" type="CSGBox3D" parent="UpgradeStore" unique_id=1887611465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.15761, 11.440815, -0.24905443)
+size = Vector3(3, 12, 6)
 material = SubResource("StandardMaterial3D_rus8k")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="UpgradeStore/Window" unique_id=257441217]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.936844, 15.551804, 10.294726)
-size = Vector3(1, 7, 1)
+[node name="DoorKnob" type="MeshInstance3D" parent="UpgradeStore" unique_id=1795827457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.342606, 11.898859, -2.320839)
+mesh = SubResource("SphereMesh_5xbjy")
+
+[node name="StandBase" type="CSGBox3D" parent="UpgradeStore" unique_id=1661069985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.06577, 8.161159, 0)
+size = Vector3(6, 5, 15)
 material = SubResource("StandardMaterial3D_5xbjy")
+
+[node name="StandPole" type="MeshInstance3D" parent="UpgradeStore" unique_id=971282720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.27656, 14.5441475, 6.520095)
+mesh = SubResource("CylinderMesh_fcfvj")
+
+[node name="StandPole2" type="MeshInstance3D" parent="UpgradeStore" unique_id=703392417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.27656, 14.5441475, -6.3378687)
+mesh = SubResource("CylinderMesh_fcfvj")
+
+[node name="Cover" type="CSGBox3D" parent="UpgradeStore" unique_id=412435825]
+transform = Transform3D(0.979017, 0.20377845, 0, -0.20377845, 0.979017, 0, 0, 0, 1, -54.514034, 18.809708, 2.1103516)
+size = Vector3(12, 2, 21)
+material = SubResource("StandardMaterial3D_fcfvj")
+
+[node name="COLOR" type="CSGBox3D" parent="UpgradeStore" unique_id=509831782]
+transform = Transform3D(0.9788674, 0.20449604, 0, -0.20449604, 0.9788674, 0, 0, 0, 1, -54.51708, 18.809925, 11.119067)
+size = Vector3(12.052734, 2.0108643, 3)
+material = SubResource("StandardMaterial3D_pa8r4")
+
+[node name="COLOR2" type="CSGBox3D" parent="UpgradeStore" unique_id=2091549200]
+transform = Transform3D(0.9788674, 0.20449604, 0, -0.20449604, 0.9788674, 0, 0, 0, 1, -54.517, 18.81, 5.119)
+size = Vector3(12.052734, 2.0108643, 3)
+material = SubResource("StandardMaterial3D_pa8r4")
+
+[node name="COLOR3" type="CSGBox3D" parent="UpgradeStore" unique_id=398607384]
+transform = Transform3D(0.9788674, 0.20449604, 0, -0.20449604, 0.9788674, 0, 0, 0, 1, -54.517, 18.81, -0.881)
+size = Vector3(12.052734, 2.0108643, 3)
+material = SubResource("StandardMaterial3D_pa8r4")
+
+[node name="COLOR4" type="CSGBox3D" parent="UpgradeStore" unique_id=1020776543]
+transform = Transform3D(0.9788674, 0.20449604, 0, -0.20449604, 0.9788674, 0, 0, 0, 1, -54.517, 18.81, -6.881)
+size = Vector3(12.052734, 2.0108643, 3)
+material = SubResource("StandardMaterial3D_pa8r4")

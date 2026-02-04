@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dw2gc2ovfuieo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rus8k"]
+albedo_color = Color(0, 1, 0.9333334, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xbjy"]
+albedo_color = Color(0.5, 0.17500001, 0, 1)
+
+[node name="Window" type="CSGBox3D" unique_id=2024856384]
+
+[node name="Glass" type="CSGBox3D" parent="." unique_id=1218254691]
+size = Vector3(5, 5, 5)
+material = SubResource("StandardMaterial3D_rus8k")
+
+[node name="WoodOutline" type="CSGBox3D" parent="." unique_id=1606089231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5695305, 0.2096858, 2.7860627)
+size = Vector3(1, 5.503845, 1)
+material = SubResource("StandardMaterial3D_5xbjy")
+
+[node name="WoodOutline2" type="CSGBox3D" parent="." unique_id=516695810]
+transform = Transform3D(1, 0, 0, 0, 0.00010474125, 1, 0, -1, 0.00010474125, 2.5664113, 2.4584231, 0)
+size = Vector3(1, 5.389084, 1)
+material = SubResource("StandardMaterial3D_5xbjy")
+
+[node name="WoodOutline3" type="CSGBox3D" parent="." unique_id=999396754]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.5637798, -2.0625818, 0)
+size = Vector3(1, 5.4802246, 1)
+material = SubResource("StandardMaterial3D_5xbjy")
+
+[node name="WoodOutline4" type="CSGBox3D" parent="." unique_id=583970949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5617785, 0.28730154, -2.2642655)
+size = Vector3(1, 5.345337, 1)
+material = SubResource("StandardMaterial3D_5xbjy")
+
+[node name="WoodOutline5" type="CSGBox3D" parent="." unique_id=1743384508]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 2.8135145, 0, 0)
+size = Vector3(0.5, 5.345, 0.5)
+material = SubResource("StandardMaterial3D_5xbjy")
+
+[node name="WoodOutline6" type="CSGBox3D" parent="." unique_id=1812787263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8127582, 0.11039686, 0)
+size = Vector3(0.5, 5.345, 0.5)
+material = SubResource("StandardMaterial3D_5xbjy")
