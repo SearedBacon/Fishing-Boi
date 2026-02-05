@@ -26,14 +26,32 @@ offset_bottom = 297.0
 theme_override_font_sizes/font_size = 40
 text = "Reel Speed"
 
-[node name="LineSpeedButton" type="Button" parent="." unique_id=306555426]
-offset_left = 127.0
-offset_top = 372.0
-offset_right = 239.0
-offset_bottom = 403.0
+[node name="LineStrengthButton" type="Button" parent="." unique_id=306555426]
+offset_left = 126.0
+offset_top = 341.0
+offset_right = 392.0
+offset_bottom = 404.0
 theme_override_font_sizes/font_size = 40
 text = "Line Strength"
 
+[node name="LuckButton" type="Button" parent="." unique_id=960684540]
+offset_left = 146.0
+offset_top = 421.0
+offset_right = 244.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 40
+text = "Luck"
+
+[node name="CloseButton" type="Button" parent="." unique_id=1649534123]
+offset_left = 523.0
+offset_top = 501.0
+offset_right = 634.0
+offset_bottom = 564.0
+theme_override_font_sizes/font_size = 40
+text = "Close"
+
 [connection signal="pressed" from="DepthButon" to="." method="_on_depth_buton_pressed"]
 [connection signal="pressed" from="ReelSpeedButton" to="." method="_on_reel_speed_button_pressed"]
-[connection signal="pressed" from="LineSpeedButton" to="." method="_on_line_speed_button_pressed"]
+[connection signal="pressed" from="LineStrengthButton" to="." method="_on_line_strength_button_pressed"]
+[connection signal="pressed" from="LuckButton" to="." method="_on_luck_button_pressed"]
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
