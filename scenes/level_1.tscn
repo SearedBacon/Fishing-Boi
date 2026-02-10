@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cuo8gfhkuj1sp" path="res://scenes/upgrade_shop.tscn" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://dw2gc2ovfuieo" path="res://scenes/window.tscn" id="3_rus8k"]
 [ext_resource type="PackedScene" uid="uid://ctby71rciwhxm" path="res://scenes/player.tscn" id="4_5xbjy"]
+[ext_resource type="PackedScene" uid="uid://ckbh446knv7qh" path="res://scenes/fishing_chair.tscn" id="5_4nkto"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_014kd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -23,6 +24,9 @@ albedo_color = Color(0, 0.5833335, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hn12h"]
 albedo_color = Color(0, 0.54, 0.1800001, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5xbjy"]
+size = Vector3(5, 5, 15)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hls8"]
 albedo_color = Color(0.4962579, 0.17455018, 0, 1)
@@ -61,8 +65,7 @@ height = 8.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pa8r4"]
 albedo_color = Color(0.7425065, 2.7915835e-06, 5.7756904e-07, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5xbjy"]
-size = Vector3(5, 5, 15)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15mv3"]
 
 [node name="Level1" type="Node3D" unique_id=267723521]
 script = ExtResource("1_014kd")
@@ -84,6 +87,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.98552, 0.7004175, 0)
 use_collision = true
 size = Vector3(61.439697, 10, 75)
 material = SubResource("StandardMaterial3D_hn12h")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1110458347]
+transform = Transform3D(1, 0, 0, 0, 0.83489597, 0.5504079, 0, -0.5504079, 0.83489597, -25.36449, 38.972504, 44.498493)
+
+[node name="Player" parent="." unique_id=1871690669 instance=ExtResource("4_5xbjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.141182, 9.060146, 0)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1673328998]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1135240363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.634747, 8.141025, 0)
+shape = SubResource("BoxShape3D_5xbjy")
 
 [node name="Deck" type="Node" parent="." unique_id=1695222886]
 
@@ -131,12 +146,6 @@ use_collision = true
 size = Vector3(6, 1, 10)
 material = SubResource("StandardMaterial3D_ihfcg")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1110458347]
-transform = Transform3D(1, 0, 0, 0, 0.759646, 0.65033674, 0, -0.65033674, 0.759646, -23.383654, 36.665707, 43.84237)
-
-[node name="UpgradeShop" parent="." unique_id=1040199959 instance=ExtResource("2_bswci")]
-visible = false
-
 [node name="UpgradeStore" type="Node" parent="." unique_id=2025663157]
 
 [node name="Big" type="CSGBox3D" parent="UpgradeStore" unique_id=683135695]
@@ -149,13 +158,16 @@ material = SubResource("StandardMaterial3D_bswci")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 15.074189, 6.5588875)
 
 [node name="Window2" parent="UpgradeStore" unique_id=1348261009 instance=ExtResource("3_rus8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 25.130836, 6.5276957)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 23.908062, 6.5276957)
 
 [node name="Window3" parent="UpgradeStore" unique_id=324197550 instance=ExtResource("3_rus8k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 15.074189, -7.9710264)
 
 [node name="Window4" parent="UpgradeStore" unique_id=352638747 instance=ExtResource("3_rus8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 25.101639, -7.9710264)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 23.784927, -7.9710264)
+
+[node name="Window5" parent="UpgradeStore" unique_id=498012616 instance=ExtResource("3_rus8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 32.36749, 0.013744354)
 
 [node name="Door" type="CSGBox3D" parent="UpgradeStore" unique_id=1887611465]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.15761, 11.440815, -0.24905443)
@@ -210,18 +222,48 @@ use_collision = true
 size = Vector3(12.052734, 2.0108643, 3)
 material = SubResource("StandardMaterial3D_pa8r4")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="UpgradeStore" unique_id=899211695]
-transform = Transform3D(1, 0, 0, 0, 0.9273211, -0.37426674, 0, 0.37426674, 0.9273211, -73.73804, 34.20092, 9.486766)
-size = Vector3(15, 2, 17)
+[node name="Roof" type="CSGBox3D" parent="UpgradeStore" unique_id=899211695]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, -73.73804, 34.20092, 8.143908)
+size = Vector3(15, 2, 20)
 
-[node name="Player" parent="." unique_id=1871690669 instance=ExtResource("4_5xbjy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.141182, 9.060146, 0)
+[node name="Roof2" type="CSGBox3D" parent="UpgradeStore" unique_id=1966159105]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, -73.73804, 34.20092, -8.180056)
+size = Vector3(15, 2, 20)
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1673328998]
+[node name="RoofFill" type="CSGBox3D" parent="UpgradeStore" unique_id=2040185857]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, -73.70318, 32.223774, -0.60602987)
+size = Vector3(12, 12.036621, 9.999756)
+material = SubResource("StandardMaterial3D_15mv3")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1135240363]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.634747, 8.141025, 0)
-shape = SubResource("BoxShape3D_5xbjy")
+[node name="RoofFill2" type="CSGBox3D" parent="UpgradeStore" unique_id=41466376]
+transform = Transform3D(1, 0, 0, 0, 0.8569425, -0.51541203, 0, 0.51541203, 0.8569425, -73.70318, 32.223774, 7.5134916)
+size = Vector3(12, 5, 10)
+material = SubResource("StandardMaterial3D_15mv3")
+
+[node name="RoofFill3" type="CSGBox3D" parent="UpgradeStore" unique_id=1849723979]
+transform = Transform3D(1, 0, 0, 0, 0.9052502, 0.4248789, 0, -0.4248789, 0.9052502, -73.70318, 32.223774, -7.3650002)
+size = Vector3(12, 5, 10)
+material = SubResource("StandardMaterial3D_15mv3")
+
+[node name="Chairs" type="Node" parent="." unique_id=1428822667]
+
+[node name="FishingChair" parent="Chairs" unique_id=421038742 instance=ExtResource("5_4nkto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.294945, 5.877263, -13.091505)
+
+[node name="FishingChair2" parent="Chairs" unique_id=1032897045 instance=ExtResource("5_4nkto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.294945, 5.877263, -28.712582)
+
+[node name="FishingChair3" parent="Chairs" unique_id=422235008 instance=ExtResource("5_4nkto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.294945, 5.877263, 12.792371)
+
+[node name="FishingChair4" parent="Chairs" unique_id=1913141199 instance=ExtResource("5_4nkto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.294945, 5.877263, 28.665432)
+
+[node name="FishingChair5" parent="Chairs" unique_id=284820484 instance=ExtResource("5_4nkto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.424101, 5.877263, 0.11999941)
+
+[node name="UpgradeShop" parent="." unique_id=1040199959 instance=ExtResource("2_bswci")]
+visible = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_shape_entered" from="Area3D" to="." method="_on_area_3d_area_shape_entered"]

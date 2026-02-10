@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b21ofhuyw0w30"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uyv35"]
+emission_shape_scale = Vector3(2, 2, 1)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+spread = 15.0
+gravity = Vector3(0, 9.8, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbch0"]
+albedo_color = Color(0, 0.5833335, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_b1f7g"]
+material = SubResource("StandardMaterial3D_kbch0")
+radius = 0.25
+height = 0.5
+
+[node name="FishingEffect" type="GPUParticles3D" unique_id=1393462326]
+transform = Transform3D(1, 0, 0, 0, -0.0051662065, 0.99998665, 0, -0.99998665, -0.0051662065, 0, 0, 0)
+amount = 64
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_uyv35")
+draw_pass_1 = SubResource("SphereMesh_b1f7g")

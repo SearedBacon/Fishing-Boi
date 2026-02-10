@@ -2,6 +2,15 @@
 
 [ext_resource type="Script" uid="uid://4tfk2mcg8iqd" path="res://scripts/upgrade_shop.gd" id="1_v8ny2"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_v8ny2"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_mrt2i"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_mfja5"]
+font_size = 50
+
 [node name="UpgradeShop" type="CanvasLayer" unique_id=1040199959]
 script = ExtResource("1_v8ny2")
 
@@ -10,48 +19,89 @@ offset_right = 1151.0
 offset_bottom = 647.0
 color = Color(0.36, 0.36, 0.36, 0.5019608)
 
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=768463750]
+offset_left = 56.0
+offset_top = 152.0
+offset_right = 502.0
+offset_bottom = 601.0
+color = Color(0.2, 0.2, 0.2, 0.6039216)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=491384063]
+offset_left = 628.0
+offset_top = 155.0
+offset_right = 1102.0
+offset_bottom = 604.0
+color = Color(0.2, 0.2, 0.2, 0.6039216)
+
 [node name="DepthButon" type="Button" parent="." unique_id=213497287]
-offset_left = 150.0
-offset_top = 195.0
-offset_right = 206.0
-offset_bottom = 226.0
+offset_left = 682.0
+offset_top = 237.0
+offset_right = 809.0
+offset_bottom = 300.0
 theme_override_font_sizes/font_size = 40
 text = "Depth"
 
 [node name="ReelSpeedButton" type="Button" parent="." unique_id=2053628293]
-offset_left = 134.0
-offset_top = 266.0
-offset_right = 227.0
-offset_bottom = 297.0
+offset_left = 667.0
+offset_top = 341.0
+offset_right = 886.0
+offset_bottom = 404.0
 theme_override_font_sizes/font_size = 40
 text = "Reel Speed"
 
-[node name="LineStrengthButton" type="Button" parent="." unique_id=306555426]
-offset_left = 126.0
-offset_top = 341.0
-offset_right = 392.0
-offset_bottom = 404.0
-theme_override_font_sizes/font_size = 40
-text = "Line Strength"
-
 [node name="LuckButton" type="Button" parent="." unique_id=960684540]
-offset_left = 146.0
-offset_top = 421.0
-offset_right = 244.0
-offset_bottom = 484.0
+offset_left = 165.0
+offset_top = 234.0
+offset_right = 263.0
+offset_bottom = 297.0
 theme_override_font_sizes/font_size = 40
 text = "Luck"
 
+[node name="StrengthButton" type="Button" parent="." unique_id=287598673]
+offset_left = 128.0
+offset_top = 318.0
+offset_right = 303.0
+offset_bottom = 381.0
+theme_override_font_sizes/font_size = 40
+text = "Strength"
+
 [node name="CloseButton" type="Button" parent="." unique_id=1649534123]
-offset_left = 523.0
-offset_top = 501.0
-offset_right = 634.0
-offset_bottom = 564.0
+offset_left = 510.0
+offset_top = 573.0
+offset_right = 621.0
+offset_bottom = 636.0
 theme_override_font_sizes/font_size = 40
 text = "Close"
 
+[node name="Label" type="Label" parent="." unique_id=912763036]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -507.0
+offset_right = 507.0
+offset_bottom = 137.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "Upgrades!!!!!!!! HAZAH!"
+label_settings = SubResource("LabelSettings_v8ny2")
+
+[node name="Label2" type="Label" parent="." unique_id=89392356]
+offset_left = 112.0
+offset_top = 154.0
+offset_right = 323.0
+offset_bottom = 223.0
+text = "Personal"
+label_settings = SubResource("LabelSettings_mrt2i")
+
+[node name="Label3" type="Label" parent="." unique_id=1675480347]
+offset_left = 726.0
+offset_top = 148.0
+offset_right = 820.0
+offset_bottom = 217.0
+text = "Rod"
+label_settings = SubResource("LabelSettings_mfja5")
+
 [connection signal="pressed" from="DepthButon" to="." method="_on_depth_buton_pressed"]
 [connection signal="pressed" from="ReelSpeedButton" to="." method="_on_reel_speed_button_pressed"]
-[connection signal="pressed" from="LineStrengthButton" to="." method="_on_line_strength_button_pressed"]
 [connection signal="pressed" from="LuckButton" to="." method="_on_luck_button_pressed"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
