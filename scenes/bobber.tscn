@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c0ax1i1uv3n67"]
+
+[ext_resource type="Script" uid="uid://cnjv6vc7xrkjv" path="res://scripts/bobber.gd" id="1_2wku4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hvhn4"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_2wku4"]
+material = SubResource("StandardMaterial3D_hvhn4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rn3pg"]
+albedo_color = Color(0.74, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1y8pg"]
+material = SubResource("StandardMaterial3D_rn3pg")
+
+[node name="Bobber" type="MeshInstance3D" unique_id=1542369649]
+mesh = SubResource("SphereMesh_2wku4")
+script = ExtResource("1_2wku4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=95258734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0)
+mesh = SubResource("SphereMesh_1y8pg")

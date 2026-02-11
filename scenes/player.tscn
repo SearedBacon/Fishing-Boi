@@ -16,5 +16,5 @@ size = Vector3(5, 5, 5)
 shape = SubResource("BoxShape3D_3vyb7")
 
 [node name="FishingEffect" parent="." unique_id=1393462326 instance=ExtResource("2_g2els")]
-transform = Transform3D(1, 0, 0, 0, -0.0051662065, 0.99998665, 0, -0.99998665, -0.0051662065, 11.493824, -7.1149836, 0)
-emitting = false
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -9.689, -16)
+visible = false

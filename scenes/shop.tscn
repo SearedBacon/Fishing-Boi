@@ -11,13 +11,13 @@ font_size = 50
 [sub_resource type="LabelSettings" id="LabelSettings_mfja5"]
 font_size = 50
 
-[node name="UpgradeShop" type="CanvasLayer" unique_id=1040199959]
+[node name="Shop" type="CanvasLayer" unique_id=1040199959]
 script = ExtResource("1_v8ny2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1964844977]
 offset_right = 1151.0
 offset_bottom = 647.0
-color = Color(0.36, 0.36, 0.36, 0.5019608)
+color = Color(0.27, 0.27, 0.27, 0.5176471)
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=768463750]
 offset_left = 56.0
