@@ -5,12 +5,6 @@
 [sub_resource type="LabelSettings" id="LabelSettings_v8ny2"]
 font_size = 100
 
-[sub_resource type="LabelSettings" id="LabelSettings_mrt2i"]
-font_size = 50
-
-[sub_resource type="LabelSettings" id="LabelSettings_mfja5"]
-font_size = 50
-
 [node name="Shop" type="CanvasLayer" unique_id=1040199959]
 script = ExtResource("1_v8ny2")
 
@@ -34,36 +28,36 @@ offset_bottom = 604.0
 color = Color(0.2, 0.2, 0.2, 0.6039216)
 
 [node name="DepthButon" type="Button" parent="." unique_id=213497287]
-offset_left = 682.0
-offset_top = 237.0
-offset_right = 809.0
-offset_bottom = 300.0
+offset_left = 86.0
+offset_top = 321.0
+offset_right = 213.0
+offset_bottom = 384.0
 theme_override_font_sizes/font_size = 40
-text = "Depth"
+text = "Line Strength"
 
 [node name="ReelSpeedButton" type="Button" parent="." unique_id=2053628293]
-offset_left = 667.0
-offset_top = 341.0
-offset_right = 886.0
-offset_bottom = 404.0
+offset_left = 89.0
+offset_top = 398.0
+offset_right = 308.0
+offset_bottom = 461.0
 theme_override_font_sizes/font_size = 40
 text = "Reel Speed"
 
 [node name="LuckButton" type="Button" parent="." unique_id=960684540]
-offset_left = 165.0
-offset_top = 234.0
-offset_right = 263.0
-offset_bottom = 297.0
+offset_left = 84.0
+offset_top = 164.0
+offset_right = 182.0
+offset_bottom = 227.0
 theme_override_font_sizes/font_size = 40
 text = "Luck"
 
 [node name="StrengthButton" type="Button" parent="." unique_id=287598673]
-offset_left = 128.0
-offset_top = 318.0
-offset_right = 303.0
-offset_bottom = 381.0
+offset_left = 83.0
+offset_top = 244.0
+offset_right = 258.0
+offset_bottom = 307.0
 theme_override_font_sizes/font_size = 40
-text = "Strength"
+text = "Catch Speed"
 
 [node name="CloseButton" type="Button" parent="." unique_id=1649534123]
 offset_left = 510.0
@@ -85,23 +79,8 @@ size_flags_horizontal = 4
 text = "Upgrades!!!!!!!! HAZAH!"
 label_settings = SubResource("LabelSettings_v8ny2")
 
-[node name="Label2" type="Label" parent="." unique_id=89392356]
-offset_left = 112.0
-offset_top = 154.0
-offset_right = 323.0
-offset_bottom = 223.0
-text = "Personal"
-label_settings = SubResource("LabelSettings_mrt2i")
-
-[node name="Label3" type="Label" parent="." unique_id=1675480347]
-offset_left = 726.0
-offset_top = 148.0
-offset_right = 820.0
-offset_bottom = 217.0
-text = "Rod"
-label_settings = SubResource("LabelSettings_mfja5")
-
 [connection signal="pressed" from="DepthButon" to="." method="_on_depth_buton_pressed"]
 [connection signal="pressed" from="ReelSpeedButton" to="." method="_on_reel_speed_button_pressed"]
 [connection signal="pressed" from="LuckButton" to="." method="_on_luck_button_pressed"]
+[connection signal="pressed" from="StrengthButton" to="." method="_on_strength_button_pressed"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

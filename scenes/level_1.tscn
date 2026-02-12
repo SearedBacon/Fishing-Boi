@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cthanm8naway1" path="res://scripts/level_1.gd" id="1_014kd"]
 [ext_resource type="PackedScene" uid="uid://cuo8gfhkuj1sp" path="res://scenes/shop.tscn" id="2_bswci"]
-[ext_resource type="PackedScene" uid="uid://c0ax1i1uv3n67" path="res://scenes/bobber.tscn" id="3_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://dw2gc2ovfuieo" path="res://scenes/window.tscn" id="3_rus8k"]
 [ext_resource type="PackedScene" uid="uid://ctby71rciwhxm" path="res://scenes/player.tscn" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://ckbh446knv7qh" path="res://scenes/fishing_chair.tscn" id="5_4nkto"]
@@ -100,8 +99,6 @@ transform = Transform3D(1, 0, 0, 0, 0.83489597, 0.5504079, 0, -0.5504079, 0.8348
 
 [node name="Player" parent="." unique_id=1871690669 instance=ExtResource("4_5xbjy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.141182, 9.060146, 0)
-
-[node name="Bobber" parent="Player" unique_id=1542369649 instance=ExtResource("3_fcfvj")]
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1673328998]
 
