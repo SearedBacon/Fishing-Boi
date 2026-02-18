@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		bobber.visible=false
 		line.visible=false
 		fishing_effect.visible=false
-	
+		
 	if Globals.catch==true and Input.is_action_just_pressed("FISH"):
 		Globals.money+=100
 		bobber.visible=false
@@ -45,14 +45,17 @@ func _physics_process(delta: float) -> void:
 		fishing_effect.visible=false
 		Globals.catch=false
 		Globals.can_fish=false
+		Globals.speed=15
+		Globals.yes_turn=true
 		
 	if Globals.can_fish==true and Input.is_action_just_pressed("FISH"):
+		Globals.speed=0
+		Globals.yes_turn=false
 		bobber.visible=true
 		line.visible=true
 		await get_tree().create_timer(Globals.wait_time).timeout
 		fishing_effect.visible=true
 		Globals.catch=true
-	
 	
 	
 	move_and_slide()

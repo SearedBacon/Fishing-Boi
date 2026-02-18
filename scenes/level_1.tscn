@@ -26,7 +26,7 @@ albedo_color = Color(0, 0.5833335, 1, 1)
 albedo_color = Color(0, 0.54, 0.1800001, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5xbjy"]
-size = Vector3(5, 5, 15)
+size = Vector3(5, 5, 10.614502)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hls8"]
 albedo_color = Color(0.4962579, 0.17455018, 0, 1)
@@ -74,7 +74,7 @@ albedo_color = Color(0.74, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15mv3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4nkto"]
-size = Vector3(11.697754, 10, 75)
+size = Vector3(46, 10, 75)
 
 [node name="Level1" type="Node3D" unique_id=267723521]
 script = ExtResource("1_014kd")
@@ -87,8 +87,8 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="OceanFloor" type="CSGBox3D" parent="." unique_id=1013749090]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-size = Vector3(75, 3, 75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.028748, -1.5, 0)
+size = Vector3(109.057495, 3, 75)
 material = SubResource("StandardMaterial3D_ilcil")
 
 [node name="Land" type="CSGBox3D" parent="." unique_id=486104190]
@@ -98,7 +98,7 @@ size = Vector3(61.439697, 10, 75)
 material = SubResource("StandardMaterial3D_hn12h")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1110458347]
-transform = Transform3D(1, 0, 0, 0, 0.83489597, 0.5504079, 0, -0.5504079, 0.83489597, -25.36449, 38.972504, 44.498493)
+transform = Transform3D(1, 0, 0, 0, 0.8348478, 0.55048066, 0, -0.55048066, 0.8348478, -25.36449, 38.972504, 44.498493)
 
 [node name="Player" parent="." unique_id=1871690669 instance=ExtResource("4_5xbjy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.141182, 5.727051, 0)
@@ -106,7 +106,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.141182, 5.727051, 0)
 [node name="Area3D" type="Area3D" parent="." unique_id=1673328998]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1135240363]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.634747, 8.141025, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.634747, 8.141025, 0.121878624)
 shape = SubResource("BoxShape3D_5xbjy")
 
 [node name="Deck" type="Node" parent="." unique_id=1695222886]
@@ -158,28 +158,29 @@ material = SubResource("StandardMaterial3D_ihfcg")
 [node name="UpgradeStore" type="Node" parent="." unique_id=2025663157]
 
 [node name="Big" type="CSGBox3D" parent="UpgradeStore" unique_id=683135695]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.708664, 19.00395, 0)
+transform = Transform3D(0.99997157, -0.007539751, 0, 0.007539751, 0.99997157, 0, 0, 0, 1, -73.708664, 19.00395, 0)
 use_collision = true
 size = Vector3(12, 26.646484, 25)
 material = SubResource("StandardMaterial3D_bswci")
 
 [node name="Window" parent="UpgradeStore" unique_id=2024856384 instance=ExtResource("3_rus8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 15.074189, 6.5588875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.033, 16.63, 6.559)
 
 [node name="Window2" parent="UpgradeStore" unique_id=1348261009 instance=ExtResource("3_rus8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 23.908062, 6.5276957)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.033, 25.9, 6.528)
 
 [node name="Window3" parent="UpgradeStore" unique_id=324197550 instance=ExtResource("3_rus8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 15.074189, -7.9710264)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.033, 16.63, -7.971)
 
 [node name="Window4" parent="UpgradeStore" unique_id=352638747 instance=ExtResource("3_rus8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 23.784927, -7.9710264)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.033, 25.9, -7.971)
 
 [node name="Window5" parent="UpgradeStore" unique_id=498012616 instance=ExtResource("3_rus8k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.03325, 32.36749, 0.013744354)
+visible = false
 
 [node name="Door" type="CSGBox3D" parent="UpgradeStore" unique_id=1887611465]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.15761, 11.440815, -0.24905443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.03756, 11.440815, -0.24905443)
 size = Vector3(3, 12, 6)
 material = SubResource("StandardMaterial3D_rus8k")
 
@@ -279,7 +280,7 @@ visible = false
 [node name="FishingArea" type="Area3D" parent="." unique_id=694540100]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FishingArea" unique_id=865481450]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.163801, 10.688971, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0191784, 10.688971, 0)
 shape = SubResource("BoxShape3D_4nkto")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
