@@ -16,7 +16,7 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_g2els")
 top_radius = 0.1
 bottom_radius = 0.1
-height = 20.0
+height = 30.0
 
 [node name="Player" type="CharacterBody3D" unique_id=1871690669]
 script = ExtResource("1_3vyb7")
@@ -30,13 +30,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4532063, 4.525214, 0)
 shape = SubResource("CapsuleShape3D_dqkch")
 
 [node name="FishingEffect" parent="." unique_id=1393462326 instance=ExtResource("2_g2els")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -9.689, -16)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.222138, -6.8039174, -22.283007)
 visible = false
 
 [node name="Line" type="MeshInstance3D" parent="." unique_id=200757340]
-transform = Transform3D(1, 0, 0, 0, 0.5885757, -0.8084421, 0, 0.8084421, 0.5885757, -2.3466098, 5.089778, -7.710042)
+transform = Transform3D(1, 0, 0, 0, 0.5885757, -0.8084421, 0, 0.8084421, 0.5885757, -2.3394675, 2.0906992, -11.826852)
+visible = false
 mesh = SubResource("CylinderMesh_qhqgy")
 
 [node name="Bobber" parent="." unique_id=1542369649 instance=ExtResource("3_qhqgy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.289215, -16.126484)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.169382, -5.5067635, -22.315231)
 visible = false

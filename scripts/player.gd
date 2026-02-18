@@ -33,17 +33,18 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, Globals.speed)
 		velocity.z = move_toward(velocity.z, 0, Globals.speed)
 	
-	if Input.is_action_just_pressed("exit_chair"):
+	if Input.is_action_just_pressed("exit_chair") or Input.is_action_just_pressed("ui_accept"):
 		bobber.visible=false
 		line.visible=false
 		fishing_effect.visible=false
 	
-	if Globals.catch==true and Input.is_action_just_pressed("FISH") and Globals.can_fish==true:
+	if Globals.catch==true and Input.is_action_just_pressed("FISH"):
 		Globals.money+=100
 		bobber.visible=false
 		line.visible=false
 		fishing_effect.visible=false
 		Globals.catch=false
+		Globals.can_fish=false
 		
 	if Globals.can_fish==true and Input.is_action_just_pressed("FISH"):
 		bobber.visible=true
@@ -51,5 +52,7 @@ func _physics_process(delta: float) -> void:
 		await get_tree().create_timer(Globals.wait_time).timeout
 		fishing_effect.visible=true
 		Globals.catch=true
-
+	
+	
+	
 	move_and_slide()

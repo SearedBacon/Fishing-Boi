@@ -7,3 +7,13 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		shop.visible=true
 		Globals.speed=0
 		Globals.yes_turn=false
+
+
+func _on_fishing_area_body_entered(body: Node3D) -> void:
+	if body is Player:
+		Globals.can_fish=true
+
+
+func _on_fishing_area_body_exited(body: Node3D) -> void:
+	if body is Player:
+		Globals.can_fish=false

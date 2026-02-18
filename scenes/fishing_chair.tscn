@@ -8,6 +8,8 @@ albedo_color = Color(0.5, 0.17500001, 0, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_0drhm"]
 size = Vector3(2.1326294, 3.085266, 0.84714603)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgc1o"]
+
 [node name="FishingChair" type="Node3D" unique_id=421038742]
 script = ExtResource("1_bgc1o")
 
@@ -46,5 +48,9 @@ material = SubResource("StandardMaterial3D_0drhm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SitDown" unique_id=1725824495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28829956, 2.9128428, 0.0037064552)
 shape = SubResource("BoxShape3D_0drhm")
+
+[node name="goto" type="CSGBox3D" parent="." unique_id=124637432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.699197, 0)
+material = SubResource("StandardMaterial3D_bgc1o")
 
 [connection signal="body_entered" from="SitDown" to="." method="_on_sit_down_body_entered"]
