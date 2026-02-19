@@ -9,6 +9,7 @@ func _physics_process(delta: float) -> void:
 func _on_line_strength_buton_pressed() -> void:
 	if Globals.money>=100:
 		Globals.money-=100
+		Globals.wait_time-=.25
 	
 func _on_reel_speed_button_pressed() -> void:
 	if Globals.money>=100:

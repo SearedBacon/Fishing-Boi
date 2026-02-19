@@ -4,6 +4,7 @@ class_name Player
 @onready var fishing_effect: GPUParticles3D = $FishingEffect
 @onready var line: MeshInstance3D = $Line
 @onready var bobber: MeshInstance3D = $Bobber
+@onready var fih_screen: CanvasLayer = $"../FihScreen"
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -44,11 +45,14 @@ func _physics_process(delta: float) -> void:
 		line.visible=false
 		fishing_effect.visible=false
 		Globals.catch=false
+		fih_screen.visible=true
 		Globals.can_fish=false
-		Globals.speed=15
-		Globals.yes_turn=true
+		Globals.fish_caught=1
+		await get_tree().create_timer(3).timeout
+		Globals.can_fish=true
 		
-	if Globals.can_fish==true and Input.is_action_just_pressed("FISH"):
+		
+	if Globals.can_fish==true and Input.is_action_just_pressed("FISH") and Globals.fish_caught==0:
 		Globals.speed=0
 		Globals.yes_turn=false
 		bobber.visible=true

@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cuo8gfhkuj1sp" path="res://scenes/shop.tscn" id="2_bswci"]
 [ext_resource type="PackedScene" uid="uid://dw2gc2ovfuieo" path="res://scenes/window.tscn" id="3_rus8k"]
 [ext_resource type="PackedScene" uid="uid://ctby71rciwhxm" path="res://scenes/player.tscn" id="4_5xbjy"]
-[ext_resource type="PackedScene" uid="uid://ckbh446knv7qh" path="res://scenes/fishing_chair.tscn" id="5_4nkto"]
+[ext_resource type="PackedScene" uid="uid://cfgycxe2741yx" path="res://assets/Fish.glb" id="5_4nkto"]
+[ext_resource type="PackedScene" uid="uid://c7sgj8y5ayycd" path="res://scenes/fih_screen.tscn" id="6_fcfvj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_014kd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -74,7 +75,7 @@ albedo_color = Color(0.74, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15mv3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4nkto"]
-size = Vector3(46, 10, 75)
+size = Vector3(40.108887, 10, 75)
 
 [node name="Level1" type="Node3D" unique_id=267723521]
 script = ExtResource("1_014kd")
@@ -87,14 +88,14 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="OceanFloor" type="CSGBox3D" parent="." unique_id=1013749090]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.028748, -1.5, 0)
-size = Vector3(109.057495, 3, 75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.493927, -1.5, 0)
+size = Vector3(151.98785, 3, 75)
 material = SubResource("StandardMaterial3D_ilcil")
 
 [node name="Land" type="CSGBox3D" parent="." unique_id=486104190]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.98552, 0.7004175, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.249756, 0.7004175, 0)
 use_collision = true
-size = Vector3(61.439697, 10, 75)
+size = Vector3(87.96817, 10, 75)
 material = SubResource("StandardMaterial3D_hn12h")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1110458347]
@@ -257,31 +258,22 @@ transform = Transform3D(1, 0, 0, 0, 0.9052502, 0.4248789, 0, -0.4248789, 0.90525
 size = Vector3(12, 5, 10)
 material = SubResource("StandardMaterial3D_15mv3")
 
-[node name="Chairs" type="Node" parent="." unique_id=1428822667]
-
-[node name="FishingChair" parent="Chairs" unique_id=421038742 instance=ExtResource("5_4nkto")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.294945, 5.877263, -13.091505)
-
-[node name="FishingChair2" parent="Chairs" unique_id=1032897045 instance=ExtResource("5_4nkto")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.294945, 5.877263, -28.712582)
-
-[node name="FishingChair3" parent="Chairs" unique_id=422235008 instance=ExtResource("5_4nkto")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.294945, 5.877263, 12.792371)
-
-[node name="FishingChair4" parent="Chairs" unique_id=1913141199 instance=ExtResource("5_4nkto")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.294945, 5.877263, 28.665432)
-
-[node name="FishingChair5" parent="Chairs" unique_id=284820484 instance=ExtResource("5_4nkto")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.424101, 5.877263, 0.11999941)
-
 [node name="Shop" parent="." unique_id=1040199959 instance=ExtResource("2_bswci")]
 visible = false
 
 [node name="FishingArea" type="Area3D" parent="." unique_id=694540100]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FishingArea" unique_id=865481450]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0191784, 10.688971, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0736217, 10.688971, 0)
 shape = SubResource("BoxShape3D_4nkto")
+
+[node name="FihScreen" parent="." unique_id=231734718 instance=ExtResource("6_fcfvj")]
+visible = false
+
+[node name="ClownFih" parent="." unique_id=1204774423 instance=ExtResource("5_4nkto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.408136, 30.951256, 30.676247)
+top_level = true
+visible = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_shape_entered" from="Area3D" to="." method="_on_area_3d_area_shape_entered"]

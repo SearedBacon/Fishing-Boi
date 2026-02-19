@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c7sgj8y5ayycd"]
+
+[ext_resource type="Script" uid="uid://dffdt4n8nethi" path="res://scripts/fih_screen.gd" id="1_5sifc"]
+
+[node name="FihScreen" type="CanvasLayer" unique_id=1593464909]
+script = ExtResource("1_5sifc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1498668839]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.25, 0.25, 0.25, 0.24705882)
+
+[node name="Close" type="Button" parent="." unique_id=1528752323]
+offset_left = 525.0
+offset_top = 537.0
+offset_right = 611.0
+offset_bottom = 587.0
+theme_override_font_sizes/font_size = 30
+text = "Close"
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
