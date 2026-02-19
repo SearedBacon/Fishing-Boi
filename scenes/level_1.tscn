@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ctby71rciwhxm" path="res://scenes/player.tscn" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://cfgycxe2741yx" path="res://assets/Fish.glb" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://c7sgj8y5ayycd" path="res://scenes/fih_screen.tscn" id="6_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://bdxviygcguj5w" path="res://assets/Goldfish.glb" id="7_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://ctlpalku8mytw" path="res://assets/Kingfish.glb" id="8_15mv3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_014kd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -98,8 +100,8 @@ use_collision = true
 size = Vector3(87.96817, 10, 75)
 material = SubResource("StandardMaterial3D_hn12h")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1110458347]
-transform = Transform3D(1, 0, 0, 0, 0.8348478, 0.55048066, 0, -0.55048066, 0.8348478, -25.36449, 38.972504, 44.498493)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1715266465]
+transform = Transform3D(1, 0, 0, 0, 0.79231095, 0.6101175, 0, -0.6101175, 0.79231095, -28.841993, 35.99962, 44.255333)
 
 [node name="Player" parent="." unique_id=1871690669 instance=ExtResource("4_5xbjy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.141182, 5.727051, 0)
@@ -262,6 +264,7 @@ material = SubResource("StandardMaterial3D_15mv3")
 visible = false
 
 [node name="FishingArea" type="Area3D" parent="." unique_id=694540100]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FishingArea" unique_id=865481450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0736217, 10.688971, 0)
@@ -273,6 +276,14 @@ visible = false
 [node name="ClownFih" parent="." unique_id=1204774423 instance=ExtResource("5_4nkto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.408136, 30.951256, 30.676247)
 top_level = true
+visible = false
+
+[node name="Goldfish" parent="." unique_id=930338224 instance=ExtResource("7_pa8r4")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -24.325237, 31.124718, 29.585005)
+visible = false
+
+[node name="Kingfish" parent="." unique_id=36459959 instance=ExtResource("8_15mv3")]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -24.12415, 30.8927, 30.132578)
 visible = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
