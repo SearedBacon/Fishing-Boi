@@ -50,6 +50,7 @@ func _physics_process(delta: float) -> void:
 		Globals.fish_caught=1
 		await get_tree().create_timer(3).timeout
 		Globals.can_fish=true
+		print(Globals.random)
 		
 		
 	if Globals.can_fish==true and Input.is_action_just_pressed("FISH") and Globals.fish_caught==0:
@@ -60,6 +61,7 @@ func _physics_process(delta: float) -> void:
 		await get_tree().create_timer(Globals.wait_time).timeout
 		fishing_effect.visible=true
 		Globals.catch=true
+		Globals.random=randf_range(0,100)
 	
 	
 	move_and_slide()

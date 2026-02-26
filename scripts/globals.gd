@@ -9,3 +9,4 @@ var catch:=false
 var wait_time=5.0
 var fish:=0
 var fish_caught:=0
+var random=0

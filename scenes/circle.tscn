@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b7a8xbygoto5m"]
+
+[ext_resource type="Script" uid="uid://cf0tuu4ws8qg3" path="res://scripts/circle.gd" id="1_wcjn7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2os1m"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.36862746)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_go7sj"]
+material = SubResource("StandardMaterial3D_2os1m")
+size = Vector2(30, 2)
+
+[node name="Circle" type="Node3D" unique_id=653198354]
+script = ExtResource("1_wcjn7")
+
+[node name="HazahLight" type="MeshInstance3D" parent="." unique_id=810691918]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -28.885176, 24.693586, 20.854628)
+mesh = SubResource("PlaneMesh_go7sj")
+
+[node name="HazahLight2" type="MeshInstance3D" parent="." unique_id=413219110]
+transform = Transform3D(1.9106855e-15, 4.3711385e-08, 0.99999994, 1, -4.3711385e-08, 0, 4.371139e-08, 0.99999994, -4.3711385e-08, -28.885176, 24.693586, 20.854628)
+mesh = SubResource("PlaneMesh_go7sj")
+
+[node name="HazahLight3" type="MeshInstance3D" parent="." unique_id=1712298108]
+transform = Transform3D(0.7393458, 0.0041895136, -0.67331296, -0.6731038, -0.021089034, -0.7392473, -0.017296601, 0.99976873, -0.012772113, -28.885176, 24.693586, 20.854628)
+mesh = SubResource("PlaneMesh_go7sj")
+
+[node name="HazahLight4" type="MeshInstance3D" parent="." unique_id=1502491587]
+transform = Transform3D(0.7215985, -0.032801744, 0.6915341, 0.69174904, -0.006105236, -0.72211224, 0.027908472, 0.99944293, 0.018284973, -28.885176, 24.693586, 20.854628)
+mesh = SubResource("PlaneMesh_go7sj")

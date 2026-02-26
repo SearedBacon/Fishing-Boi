@@ -8,6 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://c7sgj8y5ayycd" path="res://scenes/fih_screen.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://bdxviygcguj5w" path="res://assets/Goldfish.glb" id="7_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://ctlpalku8mytw" path="res://assets/Kingfish.glb" id="8_15mv3"]
+[ext_resource type="PackedScene" uid="uid://b7a8xbygoto5m" path="res://scenes/circle.tscn" id="9_e3sih"]
+[ext_resource type="PackedScene" uid="uid://ctkfgaardlqb1" path="res://assets/Fish (1).glb" id="10_2os1m"]
+[ext_resource type="PackedScene" uid="uid://fhbse1qvqgo3" path="res://assets/Shark.glb" id="11_go7sj"]
+[ext_resource type="PackedScene" uid="uid://duc7qme2pl2b8" path="res://assets/Trout.glb" id="12_7gny6"]
+[ext_resource type="PackedScene" uid="uid://bo3s7phtuxfst" path="res://assets/Milkfish.fbx" id="13_2aecg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_014kd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -274,16 +279,36 @@ shape = SubResource("BoxShape3D_4nkto")
 visible = false
 
 [node name="ClownFih" parent="." unique_id=1204774423 instance=ExtResource("5_4nkto")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.408136, 30.951256, 30.676247)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.847586, 28.339214, 30.676247)
 top_level = true
 visible = false
 
 [node name="Goldfish" parent="." unique_id=930338224 instance=ExtResource("7_pa8r4")]
-transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -24.325237, 31.124718, 29.585005)
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -28.800701, 28.612144, 29.585005)
 visible = false
 
 [node name="Kingfish" parent="." unique_id=36459959 instance=ExtResource("8_15mv3")]
-transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -24.12415, 30.8927, 30.132578)
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -28.522953, 28.00798, 29.753157)
+visible = false
+
+[node name="Circle" parent="." unique_id=653198354 instance=ExtResource("9_e3sih")]
+transform = Transform3D(1, 0, 0, 0, 0.9688041, 0.24782763, 0, -0.24782763, 0.9688041, 0, -8.273626, 0)
+visible = false
+
+[node name="Salmon" parent="." unique_id=881115937 instance=ExtResource("10_2os1m")]
+transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, -28.5957, 28.514832, 30.000134)
+visible = false
+
+[node name="Shark" parent="." unique_id=2092478262 instance=ExtResource("11_go7sj")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -28.55677, 27.350555, 29.518272)
+visible = false
+
+[node name="Trout" parent="." unique_id=953733766 instance=ExtResource("12_7gny6")]
+transform = Transform3D(0.195, 0, 0, 0, 0.195, 0, 0, 0, 0.195, -28.466187, 28.723476, 29.802061)
+visible = false
+
+[node name="Milkfish" parent="." unique_id=1463537347 instance=ExtResource("13_2aecg")]
+transform = Transform3D(700, 0, 0, 0, 700, 0, 0, 0, 700, -28.251621, 26.691137, 30.157639)
 visible = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
