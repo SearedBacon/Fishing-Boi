@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://crpcmn2epi0xy"]
+
+[ext_resource type="Script" uid="uid://cckyjxp3ih0ln" path="res://scripts/circle_4.gd" id="1_2i50a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ymnnh"]
+transparency = 1
+albedo_color = Color(0.85, 0.5241667, 0, 0.36862746)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2i50a"]
+material = SubResource("StandardMaterial3D_ymnnh")
+size = Vector2(30, 2)
+
+[node name="Circle4" type="Node3D" unique_id=843597698]
+script = ExtResource("1_2i50a")
+
+[node name="lightsss" type="MeshInstance3D" parent="." unique_id=180575345]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -28.8, 24.69, 20.85)
+mesh = SubResource("PlaneMesh_2i50a")
+
+[node name="lightsss2" type="MeshInstance3D" parent="." unique_id=1989837057]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -28.8, 24.69, 20.85)
+mesh = SubResource("PlaneMesh_2i50a")
+
+[node name="lightsss3" type="MeshInstance3D" parent="." unique_id=1818910896]
+transform = Transform3D(0.70710677, 1.2802769e-08, 0.70710677, 0.70710677, -3.090862e-08, -0.70710677, 1.2802769e-08, 1, -3.090862e-08, -28.8, 24.69, 20.85)
+mesh = SubResource("PlaneMesh_2i50a")
+
+[node name="lightsss4" type="MeshInstance3D" parent="." unique_id=720948323]
+transform = Transform3D(-0.7071067, 7.4620004e-08, 0.7071067, 0.7071067, -3.090862e-08, 0.7071067, 7.462e-08, 1, -3.0908616e-08, -28.8, 24.69, 20.85)
+mesh = SubResource("PlaneMesh_2i50a")

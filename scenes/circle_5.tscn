@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dnjw35al3boko"]
+
+[ext_resource type="Script" uid="uid://bg3fnbvgqhu71" path="res://scripts/circle_5.gd" id="1_pgerq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxd6c"]
+transparency = 1
+albedo_color = Color(0.85, 0, 0, 0.36862746)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pgerq"]
+material = SubResource("StandardMaterial3D_bxd6c")
+size = Vector2(30, 2)
+
+[node name="Circle5" type="Node3D" unique_id=1993603074]
+script = ExtResource("1_pgerq")
+
+[node name="lightssss" type="MeshInstance3D" parent="." unique_id=550258457]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -28.8, 24.69, 20.85)
+mesh = SubResource("PlaneMesh_pgerq")
+
+[node name="lightssss2" type="MeshInstance3D" parent="." unique_id=1732078589]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -28.8, 24.69, 20.85)
+mesh = SubResource("PlaneMesh_pgerq")
+
+[node name="lightssss3" type="MeshInstance3D" parent="." unique_id=1800535697]
+transform = Transform3D(0.70710677, 1.2802769e-08, 0.70710677, 0.70710677, -3.090862e-08, -0.70710677, 1.2802769e-08, 1, -3.090862e-08, -28.8, 24.69, 20.85)
+mesh = SubResource("PlaneMesh_pgerq")
+
+[node name="lightssss4" type="MeshInstance3D" parent="." unique_id=816388873]
+transform = Transform3D(-0.7071067, 7.4620004e-08, 0.7071067, 0.7071067, -3.090862e-08, 0.7071067, 7.462e-08, 1, -3.0908616e-08, -28.8, 24.69, 20.85)
+mesh = SubResource("PlaneMesh_pgerq")

@@ -13,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://fhbse1qvqgo3" path="res://assets/Shark.glb" id="11_go7sj"]
 [ext_resource type="PackedScene" uid="uid://duc7qme2pl2b8" path="res://assets/Trout.glb" id="12_7gny6"]
 [ext_resource type="PackedScene" uid="uid://bo3s7phtuxfst" path="res://assets/Milkfish.fbx" id="13_2aecg"]
+[ext_resource type="PackedScene" uid="uid://oolu8wcqa2wu" path="res://scenes/circle_1.tscn" id="14_x2xxo"]
+[ext_resource type="PackedScene" uid="uid://cwcs5e2nombh4" path="res://scenes/circle_2.tscn" id="15_2cbcq"]
+[ext_resource type="PackedScene" uid="uid://c46fvrsq5egw1" path="res://scenes/circle_3.tscn" id="16_isj1j"]
+[ext_resource type="PackedScene" uid="uid://crpcmn2epi0xy" path="res://scenes/circle_4.tscn" id="17_so66j"]
+[ext_resource type="PackedScene" uid="uid://dnjw35al3boko" path="res://scenes/circle_5.tscn" id="18_tr1x6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_014kd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -91,7 +96,7 @@ script = ExtResource("1_014kd")
 environment = SubResource("Environment_rus8k")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=802688205]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 14.610933, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, -0.07653602, 0.6089115, 0.7895372, -0.49410754, 0.6646253, -0.5604739, 0, 14.610933, 0)
 shadow_enabled = true
 
 [node name="OceanFloor" type="CSGBox3D" parent="." unique_id=1013749090]
@@ -291,10 +296,6 @@ visible = false
 transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, -28.522953, 28.00798, 29.753157)
 visible = false
 
-[node name="Circle" parent="." unique_id=653198354 instance=ExtResource("9_e3sih")]
-transform = Transform3D(1, 0, 0, 0, 0.9688041, 0.24782763, 0, -0.24782763, 0.9688041, 0, -8.273626, 0)
-visible = false
-
 [node name="Salmon" parent="." unique_id=881115937 instance=ExtResource("10_2os1m")]
 transform = Transform3D(0.135, 0, 0, 0, 0.135, 0, 0, 0, 0.135, -28.5957, 28.514832, 30.000134)
 visible = false
@@ -309,6 +310,30 @@ visible = false
 
 [node name="Milkfish" parent="." unique_id=1463537347 instance=ExtResource("13_2aecg")]
 transform = Transform3D(700, 0, 0, 0, 700, 0, 0, 0, 700, -28.251621, 26.691137, 30.157639)
+visible = false
+
+[node name="Circle" parent="." unique_id=653198354 instance=ExtResource("9_e3sih")]
+transform = Transform3D(1, 0, 0, 0, 0.9688041, 0.24782763, 0, -0.24782763, 0.9688041, 0.5, -8.274, 0)
+visible = false
+
+[node name="Circle1" parent="." unique_id=1001422121 instance=ExtResource("14_x2xxo")]
+transform = Transform3D(1, 0, 0, 0, 0.9690157, 0.24699901, 0, -0.24699901, 0.9690157, 0.5, -8.274, 0)
+visible = false
+
+[node name="Circle2" parent="." unique_id=1861642280 instance=ExtResource("15_2cbcq")]
+transform = Transform3D(1, 0, 0, 0, 0.9690157, 0.24699901, 0, -0.24699901, 0.9690157, 0.5, -8.274, 0)
+visible = false
+
+[node name="Circle3" parent="." unique_id=66422360 instance=ExtResource("16_isj1j")]
+transform = Transform3D(1, 0, 0, 0, 0.96858317, 0.2486899, 0, -0.2486899, 0.96858317, 0.5, -8.274, 0)
+visible = false
+
+[node name="Circle4" parent="." unique_id=843597698 instance=ExtResource("17_so66j")]
+transform = Transform3D(1, 0, 0, 0, 0.9690157, 0.24699901, 0, -0.24699901, 0.9690157, 0.5, -8.274, 0)
+visible = false
+
+[node name="Circle5" parent="." unique_id=1993603074 instance=ExtResource("18_tr1x6")]
+transform = Transform3D(1, 0, 0, 0, 0.9690157, 0.24699901, 0, -0.24699901, 0.9690157, 0.5, -8.274, 0)
 visible = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

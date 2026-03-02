@@ -40,7 +40,6 @@ func _physics_process(delta: float) -> void:
 		fishing_effect.visible=false
 		
 	if Globals.catch==true and Input.is_action_just_pressed("FISH"):
-		Globals.money+=100
 		bobber.visible=false
 		line.visible=false
 		fishing_effect.visible=false
@@ -48,7 +47,7 @@ func _physics_process(delta: float) -> void:
 		fih_screen.visible=true
 		Globals.can_fish=false
 		Globals.fish_caught=1
-		await get_tree().create_timer(3).timeout
+		await get_tree().create_timer(Globals.time_between_casts).timeout
 		Globals.can_fish=true
 		print(Globals.random)
 		
@@ -61,7 +60,9 @@ func _physics_process(delta: float) -> void:
 		await get_tree().create_timer(Globals.wait_time).timeout
 		fishing_effect.visible=true
 		Globals.catch=true
-		Globals.random=randf_range(0,100)
+		Globals.random=randf_range(Globals.luck_minimum,100)
+		Globals.which_fish=randf_range(0,100)
+		Globals.circle_be_gone=0
 	
 	
 	move_and_slide()
