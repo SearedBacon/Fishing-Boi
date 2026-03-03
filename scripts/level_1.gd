@@ -34,11 +34,9 @@ func _process(delta: float) -> void:
 			circle_3.visible=true
 		if Globals.random<=97.5 and Globals.random>90:
 			shark.visible=true
-			Globals.money+=100
 			circle_4.visible=true
 		if Globals.random>97.5:
 			milkfish.visible=true
-			Globals.money+=150
 			circle_5.visible=true
 	else:
 		milkfish.visible=false
@@ -69,12 +67,20 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		shop.visible=true
 		Globals.speed=0
 		Globals.yes_turn=false
+		Globals.catch=false
 
 func _on_fishing_area_body_entered(body: Node3D) -> void:
 	if body is Player:
 		Globals.can_fish=true
-
+		Globals.catch=false
 
 func _on_fishing_area_body_exited(body: Node3D) -> void:
 	if body is Player:
 		Globals.can_fish=false
+		Globals.catch=false
+
+
+func _on_please_body_entered(body: Node3D) -> void:
+	if body is Player:
+		Globals.can_fish=false
+		Globals.catch=false

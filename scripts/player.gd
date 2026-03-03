@@ -5,6 +5,8 @@ class_name Player
 @onready var line: MeshInstance3D = $Line
 @onready var bobber: MeshInstance3D = $Bobber
 @onready var fih_screen: CanvasLayer = $"../FihScreen"
+@onready var bubble: AudioStreamPlayer = $Bubble
+@onready var splash: AudioStreamPlayer = $Splash
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -38,8 +40,9 @@ func _physics_process(delta: float) -> void:
 		bobber.visible=false
 		line.visible=false
 		fishing_effect.visible=false
-		
+	
 	if Globals.catch==true and Input.is_action_just_pressed("FISH"):
+		splash.play()
 		bobber.visible=false
 		line.visible=false
 		fishing_effect.visible=false
@@ -63,6 +66,7 @@ func _physics_process(delta: float) -> void:
 		Globals.random=randf_range(Globals.luck_minimum,100)
 		Globals.which_fish=randf_range(0,100)
 		Globals.circle_be_gone=0
+		bubble.play()
 	
 	
 	move_and_slide()

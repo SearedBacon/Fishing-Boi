@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cuo8gfhkuj1sp"]
 
 [ext_resource type="Script" uid="uid://4tfk2mcg8iqd" path="res://scripts/upgrade_shop.gd" id="1_v8ny2"]
+[ext_resource type="AudioStream" uid="uid://fhfjapl0jre2" path="res://assets/sound-effects-library-cash-register-sound.mp3" id="2_xfvoa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v8ny2"]
 font_size = 100
@@ -95,6 +96,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "Sell"
+
+[node name="CHACHING" type="AudioStreamPlayer" parent="." unique_id=1397659126]
+stream = ExtResource("2_xfvoa")
 
 [connection signal="pressed" from="LuckButton" to="." method="_on_luck_button_pressed"]
 [connection signal="pressed" from="CatchSpeedButton" to="." method="_on_strength_button_pressed"]

@@ -14,3 +14,7 @@ func _on_close_pressed() -> void:
 		Globals.money+=50
 	if Globals.random<=90 and Globals.random>75:
 		Globals.money+=75
+	if Globals.random<=97.5 and Globals.random>90:
+		Globals.money+=100
+	if Globals.random>97.5:
+		Globals.money+=150
