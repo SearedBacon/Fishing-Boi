@@ -13,10 +13,6 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = Globals.jump
-
 	if Globals.yes_turn==true:
 		if Input.is_action_pressed("move_left"):
 			rotate_y(.05)
@@ -35,11 +31,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, Globals.speed)
 		velocity.z = move_toward(velocity.z, 0, Globals.speed)
-	
-	if Input.is_action_just_pressed("exit_chair") or Input.is_action_just_pressed("ui_accept"):
-		bobber.visible=false
-		line.visible=false
-		fishing_effect.visible=false
 	
 	if Globals.catch==true and Input.is_action_just_pressed("FISH"):
 		splash.play()
