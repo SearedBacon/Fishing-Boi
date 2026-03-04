@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 		print(Globals.random)
 		
 		
-	if Globals.can_fish==true and Input.is_action_just_pressed("FISH") and Globals.fish_caught==0:
+	if Globals.can_fish==true and Input.is_action_just_pressed("FISH") and Globals.fish_caught==0 and Globals.able==true:
 		Globals.speed=0
 		Globals.yes_turn=false
 		bobber.visible=true

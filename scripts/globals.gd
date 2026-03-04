@@ -15,3 +15,4 @@ var luck_minimum=0
 var time_between_casts=3
 var actual_money=0
 var circle_be_gone=0
+var able=true

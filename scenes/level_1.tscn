@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c46fvrsq5egw1" path="res://scenes/circle_3.tscn" id="16_isj1j"]
 [ext_resource type="PackedScene" uid="uid://crpcmn2epi0xy" path="res://scenes/circle_4.tscn" id="17_so66j"]
 [ext_resource type="PackedScene" uid="uid://dnjw35al3boko" path="res://scenes/circle_5.tscn" id="18_tr1x6"]
+[ext_resource type="AudioStream" uid="uid://mg3i22t1j5q4" path="res://assets/gone_fishin_by_memoraphile_CC0.mp3" id="19_2cbcq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_014kd"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -89,8 +90,8 @@ albedo_color = Color(0.74, 0, 0, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_4nkto"]
 size = Vector3(40.108887, 10, 75)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_x2xxo"]
-size = Vector3(20.911987, 300, 86.92819)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x2xxo"]
+albedo_color = Color(0, 0, 0, 1)
 
 [node name="Level1" type="Node3D" unique_id=267723521]
 script = ExtResource("1_014kd")
@@ -362,15 +363,17 @@ visible = false
 use_collision = true
 size = Vector3(33.95117, 11.640747, 34.05078)
 
-[node name="Please" type="Area3D" parent="." unique_id=1963303671]
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=108413981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.37932, 5.2662945, -1.2053223)
+size = Vector3(2, 1, 77.589355)
+material = SubResource("StandardMaterial3D_x2xxo")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Please" unique_id=915947824]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.000793, 12.861568, -4.618515)
-shape = SubResource("BoxShape3D_x2xxo")
+[node name="FishingMusic" type="AudioStreamPlayer" parent="." unique_id=1781037932]
+stream = ExtResource("19_2cbcq")
+autoplay = true
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_shape_entered" from="Area3D" to="." method="_on_area_3d_area_shape_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="FishingArea" to="." method="_on_fishing_area_body_entered"]
 [connection signal="body_exited" from="FishingArea" to="." method="_on_fishing_area_body_exited"]
-[connection signal="body_entered" from="Please" to="." method="_on_please_body_entered"]

@@ -73,14 +73,12 @@ func _on_fishing_area_body_entered(body: Node3D) -> void:
 	if body is Player:
 		Globals.can_fish=true
 		Globals.catch=false
+		Globals.able=true
+		
 
 func _on_fishing_area_body_exited(body: Node3D) -> void:
 	if body is Player:
 		Globals.can_fish=false
 		Globals.catch=false
-
-
-func _on_please_body_entered(body: Node3D) -> void:
-	if body is Player:
-		Globals.can_fish=false
-		Globals.catch=false
+		Globals.able=false
+		print("worked")

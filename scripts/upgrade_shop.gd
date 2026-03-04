@@ -3,15 +3,13 @@ extends CanvasLayer
 @onready var upgrade_shop: CanvasLayer = $"."
 @onready var money_u_have: Label = $MoneyUHave
 @onready var chaching: AudioStreamPlayer = $CHACHING
+@onready var luck_stat: Label = $LuckStat
+@onready var cast_speed_stat: Label = $CastSpeedStat
 
 func _physics_process(delta: float) -> void:
 	money_u_have.text="Money: "+str(Globals.actual_money)
-
-func _on_reel_speed_button_pressed() -> void:
-	if Globals.actual_money>=150:
-		Globals.actual_money-=150
-		if Globals.wait_time>0:
-			Globals.wait_time-=.25
+	luck_stat.text="Current Luck: "+str(Globals.luck_minimum)
+	cast_speed_stat.text="Time Between Casts: "+str(Globals.wait_time)
 
 func _on_luck_button_pressed() -> void:
 	if Globals.actual_money>=100:
@@ -29,3 +27,10 @@ func _on_sell_button_pressed() -> void:
 		chaching.play()
 	Globals.actual_money+=Globals.money
 	Globals.money=0
+
+
+func _on_catch_speed_button_pressed() -> void:
+	if Globals.actual_money>=150:
+		Globals.actual_money-=150
+		if Globals.wait_time>0:
+			Globals.wait_time-=.25

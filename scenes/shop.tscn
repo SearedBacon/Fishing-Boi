@@ -9,6 +9,12 @@ font_size = 100
 [sub_resource type="LabelSettings" id="LabelSettings_lx5au"]
 font_size = 60
 
+[sub_resource type="LabelSettings" id="LabelSettings_xfvoa"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_1l46r"]
+font_size = 40
+
 [node name="Shop" type="CanvasLayer" unique_id=1040199959]
 script = ExtResource("1_v8ny2")
 
@@ -45,7 +51,7 @@ offset_bottom = -71.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
-text = "Catch Speed: 150"
+text = "Cast Speed: 150"
 
 [node name="CloseButton" type="Button" parent="." unique_id=1649534123]
 anchors_preset = 7
@@ -100,7 +106,23 @@ text = "Sell"
 [node name="CHACHING" type="AudioStreamPlayer" parent="." unique_id=1397659126]
 stream = ExtResource("2_xfvoa")
 
+[node name="LuckStat" type="Label" parent="." unique_id=772128623]
+offset_left = 9.0
+offset_top = 499.0
+offset_right = 270.0
+offset_bottom = 554.0
+text = "Current Luck:"
+label_settings = SubResource("LabelSettings_xfvoa")
+
+[node name="CastSpeedStat" type="Label" parent="." unique_id=1206950594]
+offset_left = 8.0
+offset_top = 444.0
+offset_right = 400.0
+offset_bottom = 499.0
+text = "Time between casts:"
+label_settings = SubResource("LabelSettings_1l46r")
+
 [connection signal="pressed" from="LuckButton" to="." method="_on_luck_button_pressed"]
-[connection signal="pressed" from="CatchSpeedButton" to="." method="_on_strength_button_pressed"]
+[connection signal="pressed" from="CatchSpeedButton" to="." method="_on_catch_speed_button_pressed"]
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="SellButton" to="." method="_on_sell_button_pressed"]
